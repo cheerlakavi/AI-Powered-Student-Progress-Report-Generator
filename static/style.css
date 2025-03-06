@@ -43,12 +43,12 @@ img {
 }
 
 #container-div {
-  width: 40%;
+  width: 60%;
   background-color: white;
-  padding: 30px;
+  padding: 15px 30px;
   border-radius: 10px;
   box-shadow: 1px 1px 5px black;
-  max-height: 84vh;
+  max-height: 80vh;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -106,7 +106,7 @@ select {
 .milestone-item {
   display: flex;
   align-items: center;
-  gap: 10px; /* Adds spacing between elements */
+  gap: 10px;
   margin-bottom: 5px;
 }
 
@@ -122,7 +122,6 @@ select {
 
 .btn-close {
   font-size: 12px;
-  margin-right: 15px;
 }
 
 #submit-btn {
@@ -161,7 +160,7 @@ select {
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  min-width: 350px;
+  min-width: 610px;
   max-width: 80vw;
   max-height: 70vh;
   overflow-y: auto;
@@ -239,10 +238,146 @@ select {
 
 .sticky-header {
   position: sticky;
-  top: 0;
   background-color: white;
-  padding: 20px;
+  padding: 15px;
+  padding-right: 0;
+  padding-bottom: 0;
   display: flex;
-  justify-content: flex-end; /* Align close button to the right */
+  justify-content: flex-end;
   z-index: 10;
+}
+
+@media (max-width: 1025px) {
+  #container-div {
+    padding-right: 45px;
+    max-height: 77vh;
+    width: 60%;
+  }
+}
+
+@media (max-width: 769px) {
+  h1 {
+    margin: 0 !important;
+    width: 75%;
+    padding: 5px 65px;
+    font-size: 30px !important;
+  }
+
+  #container-div {
+    width: 80%;
+    max-height: 77vh;
+  }
+
+  .milestone-modal-box {
+    width: 570px;
+  }
+}
+
+@media (max-width: 426px) {
+  img {
+    margin-left: 0;
+    height: 60px;
+    width: auto;
+  }
+
+  h1 {
+    margin-bottom: 0 !important;
+    width: 75%;
+    font-size: 25px !important;
+    padding: 0px 20px;
+  }
+
+  #outer-div {
+    margin-top: 75px;
+  }
+
+  #container-div {
+    width: 100%;
+    max-height: 82vh;
+    padding: 15px;
+  }
+
+  label {
+    font-size: 15px;
+  }
+
+  input:not(.radio),
+  textarea,
+  select {
+    font-size: 15px;
+    width: 96%;
+    border-radius: 6px;
+    padding: 4px;
+  }
+
+  select#age,
+  input#dob,
+  input#doa,
+  input#next_date,
+  textarea#comments,
+  select#env {
+    font-size: 15px;
+    padding: 4px;
+  }
+
+  p {
+    font-size: 15px;
+    margin-top: 0.9rem !important;
+    margin-bottom: 0.8rem !important;
+  }
+
+  #submit-btn {
+    font-size: 15px;
+  }
+
+  .milestone-select {
+    width: 50px;
+    margin-right: 3px;
+  }
+
+  .milestone-modal-box {
+    min-width: 400px;
+  }
+}
+
+@media (max-width: 376px) {
+  h1 {
+    font-size: 21px !important;
+    padding: 0 20px;
+  }
+
+  img {
+    height: 55px;
+  }
+
+  .milestone-modal-box {
+    min-width: 350px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 321px) {
+  h1 {
+    margin-bottom: 0 !important;
+    width: 75%;
+    font-size: 18px !important;
+    padding: 0 12px;
+  }
+
+  img {
+    height: 50px;
+  }
+
+  #outer-div {
+    padding: 10px;
+    margin-top: 73px;
+  }
+
+  #container-div {
+    max-height: 84vh;
+  }
+
+  .milestone-modal-box {
+    min-width: 310px;
+  }
 }
